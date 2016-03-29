@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="DUZ-eJ-WpB">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Flip_Views" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nzo-Pe-L2u">
+                                <rect key="frame" x="137" y="430" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3YY-rh-WzT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Nzo-Pe-L2u" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pql-jR-UZY"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Nzo-Pe-L2u" secondAttribute="bottom" constant="20" id="rWq-d1-uVF"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="900" y="844"/>
+        </scene>
+        <!--Map Flip View Controller-->
+        <scene sceneID="RGT-6y-9gJ">
+            <objects>
+                <viewController id="DUZ-eJ-WpB" customClass="MapFlipViewController" customModule="Flip_Views" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EDb-lc-q1c"/>
+                        <viewControllerLayoutGuide type="bottom" id="LJg-7S-Ot9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Er3-I3-CWW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ooz-Fr-cGh">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="440"/>
+                                <subviews>
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="dOg-K1-8el">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="440"/>
+                                    </mapView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="dOg-K1-8el" firstAttribute="top" secondItem="Ooz-Fr-cGh" secondAttribute="top" id="1nn-No-aSh"/>
+                                    <constraint firstAttribute="trailing" secondItem="dOg-K1-8el" secondAttribute="trailing" id="4TA-87-Pvy"/>
+                                    <constraint firstItem="dOg-K1-8el" firstAttribute="leading" secondItem="Ooz-Fr-cGh" secondAttribute="leading" id="aJG-bm-Arz"/>
+                                    <constraint firstAttribute="bottom" secondItem="dOg-K1-8el" secondAttribute="bottom" id="omD-Ot-ycl"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Pt-T9-K6n">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="440"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uex-1K-h8V">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="440"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="JDy-eb-16t" style="IBUITableViewCellStyleDefault" id="pOa-MU-mud">
+                                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pOa-MU-mud" id="xfZ-fg-uzu">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JDy-eb-16t">
+                                                            <rect key="frame" x="15" y="0.0" width="290" height="43"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="uex-1K-h8V" secondAttribute="bottom" id="7pD-aR-mav"/>
+                                    <constraint firstAttribute="trailing" secondItem="uex-1K-h8V" secondAttribute="trailing" id="T5H-Uq-5wd"/>
+                                    <constraint firstItem="uex-1K-h8V" firstAttribute="top" secondItem="0Pt-T9-K6n" secondAttribute="top" id="Tmb-I1-c18"/>
+                                    <constraint firstItem="uex-1K-h8V" firstAttribute="leading" secondItem="0Pt-T9-K6n" secondAttribute="leading" id="xk1-RG-GQi"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="onv-9I-AZE">
+                                <rect key="frame" x="137" y="442" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="DUZ-eJ-WpB" eventType="touchUpInside" id="1PW-3G-ohl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0Pt-T9-K6n" firstAttribute="bottom" secondItem="Ooz-Fr-cGh" secondAttribute="bottom" id="947-Ks-khR"/>
+                            <constraint firstItem="0Pt-T9-K6n" firstAttribute="top" secondItem="Ooz-Fr-cGh" secondAttribute="top" id="9kA-ho-oMf"/>
+                            <constraint firstItem="Ooz-Fr-cGh" firstAttribute="leading" secondItem="Er3-I3-CWW" secondAttribute="leadingMargin" constant="-20" id="Er6-un-LBu"/>
+                            <constraint firstItem="Ooz-Fr-cGh" firstAttribute="top" secondItem="Er3-I3-CWW" secondAttribute="topMargin" id="ICj-dt-O9U"/>
+                            <constraint firstItem="LJg-7S-Ot9" firstAttribute="top" secondItem="onv-9I-AZE" secondAttribute="bottom" constant="8" id="M8L-lf-R2b"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ooz-Fr-cGh" secondAttribute="trailing" constant="-20" id="NRc-y8-iau"/>
+                            <constraint firstItem="onv-9I-AZE" firstAttribute="top" secondItem="Ooz-Fr-cGh" secondAttribute="bottom" constant="2" id="QZX-YK-SKr"/>
+                            <constraint firstItem="onv-9I-AZE" firstAttribute="centerX" secondItem="Er3-I3-CWW" secondAttribute="centerX" id="bgg-pT-Ku7"/>
+                            <constraint firstItem="0Pt-T9-K6n" firstAttribute="leading" secondItem="Ooz-Fr-cGh" secondAttribute="leading" id="bju-1n-jzZ"/>
+                            <constraint firstItem="0Pt-T9-K6n" firstAttribute="trailing" secondItem="Ooz-Fr-cGh" secondAttribute="trailing" id="ynQ-lL-Zrr"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="mapContainerView" destination="Ooz-Fr-cGh" id="xAG-XR-ne5"/>
+                        <outlet property="mapView" destination="dOg-K1-8el" id="jj8-uR-FGg"/>
+                        <outlet property="tableView" destination="uex-1K-h8V" id="5lg-fH-eoc"/>
+                        <outlet property="tableViewContainerView" destination="0Pt-T9-K6n" id="JVc-ik-pJe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XRF-oJ-wRs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="629" y="249"/>
+        </scene>
+    </scenes>
+</document>
